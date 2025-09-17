@@ -1,0 +1,51 @@
+<section>
+    <div class="container relative">
+        <div class="circles">
+            <div class="circle">
+                <img src="assets/img/face1.webp" alt="OffBank">
+            </div>
+            <div class="circle">
+                <img src="assets/img/face2.webp" alt="OffBank">
+            </div>
+            <div class="circle">
+                <img src="assets/img/face3.webp" alt="OffBank">
+            </div>
+            <div class="circle">
+                <img src="assets/img/face4.webp" alt="OffBank">
+            </div>
+        </div>
+        <div class="opinions_wrapper">
+            <h3 class="mb-8">Opinie klientów którzy <span>wyklikali</span> swój kredyt!</h3>
+            <div class="opinions">
+                <div class="swiper" #swiperContainer>
+                    <div class="swiper-wrapper">
+                        @for (opinion of opinions; track $index) {
+                            <div class="swiper-slide">
+                                <div class="slide-content">
+                                    <div class="opinion-stars flex gap-2 mb-5">
+                                        @for (star of getStarsArray(opinion.rate); track $index) {
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="30" height="28"
+                                                 viewBox="0 0 30 28" fill="none">
+                                                <path fill-rule="evenodd" clip-rule="evenodd"
+                                                      d="M13.4292 1.14004C14.0714 -0.161264 15.927 -0.161264 16.5693 1.14004L20.0766 8.24675L27.9194 9.38636C29.3554 9.59503 29.9289 11.3598 28.8897 12.3728L23.2147 17.9046L24.5544 25.7156C24.7997 27.1459 23.2984 28.2366 22.014 27.5613L14.9992 23.8734L7.9845 27.5613C6.70004 28.2366 5.19881 27.1459 5.44412 25.7156L6.78381 17.9046L1.10877 12.3728C0.069617 11.3598 0.643036 9.59503 2.07911 9.38636L9.92183 8.24675L13.4292 1.14004Z"
+                                                      [attr.fill]="star ? '#FF007B' : '#E5E5E5'"/>
+                                            </svg>
+                                        }
+
+                                    </div>
+                                    <div class="opinion-description mb-5">
+                                        {{ opinion.description }}
+                                    </div>
+                                    <div class="opinion-footer">
+                                        {{ opinion.footer }}
+                                    </div>
+                                </div>
+                            </div>
+                        }
+                    </div>
+                </div>
+                <div class="swiper-pagination" #swiperPagination></div>
+            </div>
+        </div>
+    </div>
+</section>

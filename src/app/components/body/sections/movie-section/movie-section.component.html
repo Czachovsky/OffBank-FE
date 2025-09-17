@@ -1,0 +1,96 @@
+<section>
+    <div class="movie-container">
+        <div class="movie-wrapper">
+            <video
+                    class="movie-video"
+                    [src]="videoSrc"
+                    [poster]="posterSrc"
+                    preload="metadata"
+                    playsinline
+                    (ended)="onVideoEnded()"
+                    (loadstart)="onVideoLoadStart()"
+                    (canplay)="onVideoCanPlay()">
+                Twoja przeglądarka nie obsługuje odtwarzania video.
+            </video>
+
+            <div class="movie-overlay" [class.hidden]="isPlaying && hasUserInteracted">
+                <button
+                        class="play-button"
+                        (click)="onPlayClick()"
+                        [disabled]="isLoading"
+                        [attr.aria-label]="'Odtwórz video: ' + title">
+
+                    @if (!isLoading) {
+                        <div class="play-icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="52" height="52" viewBox="0 0 52 52"
+                                 fill="none">
+                                <path fill-rule="evenodd" clip-rule="evenodd"
+                                      d="M0.736084 26C0.736084 11.9996 12.0857 0.650024 26.0861 0.650024C40.0865 0.650024 51.4361 11.9996 51.4361 26C51.4361 40.0004 40.0865 51.35 26.0861 51.35C12.0857 51.35 0.736084 40.0004 0.736084 26ZM26.0861 4.55002C14.2396 4.55002 4.63608 14.1535 4.63608 26C4.63608 37.8465 14.2396 47.45 26.0861 47.45C37.9326 47.45 47.5361 37.8465 47.5361 26C47.5361 14.1535 37.9326 4.55002 26.0861 4.55002ZM18.6447 12.6701C19.9705 12.0511 21.4021 12.4023 22.4591 13.0719L22.5168 13.1084L35.936 22.9897C36.9589 23.6044 38.0943 24.6559 38.0965 26.2447C38.0986 27.8269 36.9642 28.9229 35.9524 29.5882L22.6091 38.9205L22.5195 38.9701C21.4833 39.5435 20.0031 40.0113 18.6145 39.2697C17.2058 38.5173 16.7809 37.0011 16.707 35.7594L16.7037 35.7043L16.6472 16.2184C16.6233 14.779 17.2176 13.3365 18.6447 12.6701ZM20.5481 16.502L33.7902 26.2529L33.8622 26.2945C33.8409 26.3089 33.8187 26.3237 33.7955 26.3388L33.7684 26.3565L20.6033 35.5641L20.5481 16.502Z"
+                                      fill="white"/>
+                            </svg>
+                        </div>
+                    }
+
+                    @if (isLoading) {
+                        <div class="loading-spinner">
+                            <div class="spinner"></div>
+                        </div>
+                    }
+                </button>
+            </div>
+
+            <div class="movie-controls" [class.visible]="isPlaying && hasUserInteracted">
+                <button
+                        class="control-button pause-button"
+                        (click)="onPlayClick()"
+                        [attr.aria-label]="isPlaying ? 'Zatrzymaj video' : 'Odtwórz video'">
+
+                    @if (isPlaying) {
+                        <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <rect x="6" y="4" width="4" height="16" fill="currentColor"/>
+                            <rect x="14" y="4" width="4" height="16" fill="currentColor"/>
+                        </svg>
+                    }
+
+                    @if (!isPlaying) {
+                        <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M8 5V19L19 12L8 5Z" fill="currentColor"/>
+                        </svg>
+                    }
+                </button>
+
+                <!-- Przycisk mute/unmute -->
+                <button
+                        class="control-button mute-button"
+                        (click)="onMuteToggle()"
+                        [attr.aria-label]="isMuted ? 'Włącz dźwięk' : 'Wyłącz dźwięk'">
+
+                    <!-- Ikona mute -->
+                    @if (isMuted) {
+                        <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M16.5 12C16.5 10.23 15.48 8.71 14 7.97V16.02C15.48 15.29 16.5 13.77 16.5 12Z"
+                                  fill="currentColor"/>
+                            <path d="M19 12C19 15.53 16.39 18.44 13 18.93V16.84C15.33 16.39 17 14.38 17 12C17 9.62 15.33 7.61 13 7.16V5.07C16.39 5.56 19 8.47 19 12Z"
+                                  fill="currentColor"/>
+                            <path d="M12 4L9.91 6.09L12 8.18V4Z" fill="currentColor"/>
+                            <path d="M4.27 3L3 4.27L7.73 9H3V15H7L12 20V13.27L16.25 17.53C15.58 18.04 14.83 18.46 14 18.7V20.77C15.38 20.45 16.63 19.82 17.68 18.96L19.73 21L21 19.73L12 10.73V4L4.27 3ZM12 4L9.91 6.09L12 8.18V4Z"
+                                  fill="currentColor"/>
+                        </svg>
+                    }
+
+                    <!-- Ikona unmute -->
+                    @if (!isMuted) {
+                        <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M3 9V15H7L12 20V4L7 9H3Z" fill="currentColor"/>
+                            <path d="M16.5 12C16.5 10.23 15.48 8.71 14 7.97V16.02C15.48 15.29 16.5 13.77 16.5 12Z"
+                                  fill="currentColor"/>
+                            <path d="M14 3.23V5.29C16.89 6.15 19 8.83 19 12C19 15.17 16.89 17.85 14 18.71V20.77C18.01 19.86 21 16.28 21 12C21 7.72 18.01 4.14 14 3.23Z"
+                                  fill="currentColor"/>
+                        </svg>
+                    }
+                </button>
+            </div>
+        </div>
+    </div>
+
+</section>

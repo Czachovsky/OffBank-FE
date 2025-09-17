@@ -1,0 +1,113 @@
+@use '../../../assets/layout/scss/mixins';
+
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  z-index: 111;
+  @supports (-webkit-backdrop-filter: initial) or (backdrop-filter: initial) {
+    -webkit-backdrop-filter: saturate(180%) blur(20px);
+    backdrop-filter: saturate(180%) blur(20px);
+    background-color: rgba(255, 255, 255, 0.72);
+  }
+  @include mixins.media-query('max', 'xlg') {
+    &.opened{
+      backdrop-filter: none;
+      .nav-elements{
+        top:0;
+      }
+    }
+  }
+  .nav-elements {
+    a {
+      @include mixins.fontSize(16);
+      @include mixins.media-query('max', 'xl') {
+        @include mixins.fontSize(14);
+      }
+    }
+
+    @include mixins.media-query('max', 'xlg') {
+      position: fixed;
+      width: 100vw;
+      height: 100vh;
+      top: -100vh;
+      left: 0;
+      z-index: 10;
+      flex-direction: column;
+      -webkit-backdrop-filter: blur(6px);
+      backdrop-filter: blur(6px);
+      transition: all 0.3s ease-in-out;
+      background-color: rgba(255, 255, 255, 0.2);
+      //background-color: rgba(23, 23, 28, 0.2);
+      padding-top: 90px;
+
+      .nav-menu {
+        flex-direction: column;
+        align-items: center;
+        padding-bottom: 40px;
+
+        a {
+          padding: 16px;
+          @include mixins.fontSize(18);
+          font-weight: 600;
+        }
+      }
+    }
+  }
+
+  .logo {
+    z-index: 15;
+  }
+}
+
+@include mixins.media-query('max', 'xlg') {
+  .hamburger-menu {
+    overflow: hidden;
+    position: relative;
+    cursor: pointer;
+    width: 40px;
+    height: 40px;
+    z-index: 50;
+
+    & > div {
+      background-color: var(--color-base);
+
+      &:nth-child(1) {
+        height: 2px;
+        left: calc(50.00000000000002% - 19px / 2);
+        position: absolute;
+        top: 14px;
+        width: 19px;
+        border-radius: 2px;
+        transform: none;
+        transform-origin: 50% 50% 0px;
+        will-change: transform;
+      }
+
+      &:nth-child(2) {
+        border-radius: 2px;
+        transform: none;
+        transform-origin: 50% 50% 0px;
+        height: 2px;
+        left: calc(50.00000000000002% - 19px / 2);
+        position: absolute;
+        top: calc(50.00000000000002% - 2px / 2);
+        width: 19px;
+      }
+
+      &:nth-child(3) {
+        bottom: 14px;
+        flex: none;
+        height: 2px;
+        left: calc(50.00000000000002% - 19px / 2);
+        position: absolute;
+        width: 19px;
+        border-radius: 2px;
+        transform: none;
+        transform-origin: 50% 50% 0px;
+        will-change: transform;
+      }
+    }
+  }
+}

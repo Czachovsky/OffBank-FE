@@ -1,0 +1,34 @@
+<header class="py-4 px-4 xlg:px-6" [ngClass]="{'opened' : mobileMenuState}">
+    <div class="flex align-items-center justify-content-between">
+        <div class="logo">
+            <img src="assets/img/off-kredyt-logo.svg" alt="OffKredyt" class="block">
+        </div>
+        <div class="hamburger-menu xlg:hidden" (click)="openMobileMenu()">
+                <div></div>
+                <div></div>
+                <div></div>
+        </div>
+        <div class="flex align-items-center nav-elements">
+            @for (group of menuItems; track $index) {
+                @if (group.type === MenuElementsType.menu) {
+                    <ul class="flex gap-3 xl:gap-5" [ngClass]="'nav-'+MenuElementsType.menu">
+                        @for (item of group.elements; track $index) {
+                            <li>
+                                <a [href]="item.url" (click)="goTo(item.section!)">{{ item.label }}</a>
+                            </li>
+                        }
+                    </ul>
+                }
+                @if (group.type === MenuElementsType.social) {
+                    <ul class="flex xl:ml-5 gap-3" [ngClass]="'nav-'+MenuElementsType.social">
+                        @for (item of group.elements; track $index) {
+                            <li>
+                                <a [href]="item.url" [innerHTML]="item.icon | sanitize: 'html'"></a>
+                            </li>
+                        }
+                    </ul>
+                }
+            }
+        </div>
+    </div>
+</header>

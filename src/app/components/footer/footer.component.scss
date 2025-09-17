@@ -1,0 +1,24 @@
+@use '../../../assets/layout/scss/mixins';
+
+footer {
+  background: var(--color-base-hover);
+  padding-top: 80px;
+}
+
+.copyright {
+  @include mixins.fontSize(12);
+  color: var(--p-blue-100);
+}
+
+a {
+  span {
+    color: var(--white);
+  }
+
+  &:has(svg) {
+    &:hover {
+      opacity: 0.8;
+    }
+  }
+}
+

@@ -1,0 +1,30 @@
+<section>
+    <div class="w-full">
+
+        <h2 class="text-center pb-7">Często zadawane pytania</h2>
+
+
+        <div class="container">
+            <div class="faq-list">
+                @for (question of faqQuestions; track $index) {
+                    <div class="faq-question border-1 mb-3" [ngClass]="{'faq-question-active': question.open}">
+                        <div class="faq-question-header flex align-items-center justify-content-between cursor-pointer pb-2" (click)="openQuestionSection($index)">
+                            <span> {{ question.header }}</span>
+                            <div class="faq-question-button flex align-items-center justify-content-center" [ngClass]="{'__active': question.open}">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="12" height="7" viewBox="0 0 12 7" fill="none">
+                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M6.50594 6.51677C6.21917 6.7796 5.77906 6.77956 5.49234 6.51669L0.493151 1.93325C0.187838 1.65333 0.167254 1.1789 0.447176 0.873587C0.727099 0.568273 1.20153 0.54769 1.50684 0.827612L5.99926 4.94643L10.4932 0.827531C10.7986 0.547658 11.273 0.568318 11.5529 0.873677C11.8328 1.17904 11.8121 1.65346 11.5068 1.93333L6.50594 6.51677Z" fill="white"/>
+                                </svg>
+                            </div>
+                        </div>
+                        <div class="faq-question-content" [ngClass]="{'question-open' : question.open}">
+                            <div>{{question.content}}</div>
+                        </div>
+                    </div>
+                }
+            </div>
+        </div>
+
+
+    </div>
+
+</section>

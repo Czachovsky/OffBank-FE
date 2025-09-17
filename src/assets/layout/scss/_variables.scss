@@ -1,0 +1,46 @@
+:root {
+  --font-family: "Poppins";
+  --font-size-base: 16px;
+  --line-height-base: 24px;
+
+  --white: #ffffff;
+  --color-base: #000000;
+  --color-base-hover: #18367F;
+  --button-red: #E6016F;
+
+  --faq-border: #D8D8D8;
+  --faq-background: #F6F6F6;
+
+  --p-blue-100: #DCE1EC;
+  --p-blue-300: #6579A9;
+
+}
+
+$mainFontSize: 16;
+$borderRadius: 12px;
+$transitionDuration: 0.3s;
+
+$grid-breakpoints: (
+        xs: 0,
+        sm: 375px,
+        md: 414px,
+        lg: 768px,
+        xlg: 992px,
+        xl: 1024px,
+        xxl: 1280px,
+        xxxl: 1440px,
+        fhd: 1920px
+) !default;
+
+$container-max-widths: (
+        sm: 350px,
+        md: 90%,
+        lg: 720px,
+        xlg: 960px,
+        xl: 980px,
+        xxl: 1200px,
+        xxxl: 1360px,
+        fhd: 1800px
+) !default;
+
+$container-padding: 15px;

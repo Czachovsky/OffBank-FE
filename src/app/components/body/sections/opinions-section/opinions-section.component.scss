@@ -1,0 +1,165 @@
+@use '../../../../../assets/layout/scss/mixins';
+
+section {
+  background: #18367F;
+  padding-top: 168px;
+  padding-bottom: 168px;
+  @include mixins.media-query('max', 'xlg') {
+    padding-top: 256px
+
+  }
+
+  .circles {
+    position: absolute;
+    height: 100%;
+    top: -160px;
+    @include mixins.media-query('max', 'xlg') {
+      height: auto;
+      width: 100%;
+      top: -144px;
+    }
+
+    .circle {
+      box-shadow: 0px 30.32px 75.79px 0px rgba(24, 54, 127, 0.3);
+      border-radius: 200px;
+      background: var(--white);
+      height: 144px;
+      aspect-ratio: 1;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: absolute;
+      @include mixins.media-query('max', 'xlg') {
+        width: 88px;
+        height: 88px;
+        img {
+          width: 55px;
+          height: 55px;
+        }
+      }
+
+      &:nth-child(1) {
+        left: 5rem;
+        top: -3rem;
+        @include mixins.media-query('max', 'xxl') {
+          left: 2rem;
+        }
+        @include mixins.media-query('max', 'xlg') {
+          left: -3rem;
+        }
+      }
+
+      &:nth-child(2) {
+        top: 13rem;
+        left: 12rem;
+        @include mixins.media-query('max', 'xxl') {
+          left: 8rem;
+        }
+        @include mixins.media-query('max', 'xlg') {
+          left: 4rem;
+          top: 0;
+        }
+      }
+
+      &:nth-child(3) {
+        top: 28rem;
+        left: 5rem;
+        @include mixins.media-query('max', 'xxl') {
+          left: 2rem;
+        }
+        @include mixins.media-query('max', 'xlg') {
+          top: -3rem;
+          left: unset;
+          right: 5rem;
+        }
+      }
+
+      &:nth-child(4) {
+        bottom: -22rem;
+        left: 12rem;
+        @include mixins.media-query('max', 'xxl') {
+          left: 8rem;
+        }
+        @include mixins.media-query('max', 'xlg') {
+          top: 0;
+          left: unset;
+          right: -2rem;
+        }
+      }
+    }
+  }
+
+  .opinions_wrapper {
+    max-width: 664px;
+    margin-left: auto;
+
+    h3 {
+      color: var(--white);
+      @include mixins.fontSize(56);
+      font-weight: 600;
+      line-height: 1.14;
+      @include mixins.media-query('max', 'xlg') {
+        @include mixins.fontSize(32);
+      }
+
+      span {
+        text-decoration: underline;
+      }
+    }
+
+    .opinions {
+      position: relative;
+
+      .opinion-description {
+        color: #DCE1EC;
+        @include mixins.fontSize(18);
+        line-height: 32px;
+        @include mixins.media-query('max', 'xlg') {
+          @include mixins.fontSize(16);
+          line-height: 24px;
+        }
+      }
+
+      .opinion-footer {
+        font-weight: 500;
+        @include mixins.fontSize(24);
+        line-height: 32px;
+        color: var(--white);
+        @include mixins.media-query('max', 'xlg') {
+          @include mixins.fontSize(18);
+          line-height: 24px;
+        }
+      }
+    }
+  }
+}
+
+:host ::ng-deep {
+  .swiper-pagination {
+    position: absolute;
+    z-index: 11;
+    margin-top: 40px;
+    display: flex;
+    gap: 11px;
+    align-items: center;
+    justify-content: end;
+    width: 100%;
+
+    .swiper-pagination-bullet {
+      width: 16px;
+      height: 16px;
+      border-radius: 50%;
+      border: 3px solid transparent;
+      background: #6579A9;
+      cursor: pointer;
+      transition: all .2s;
+
+      &.swiper-pagination-bullet-active {
+        border-color: var(--white);
+        transition: all .2s;
+        background: #18367F;
+      }
+    }
+  }
+}
+

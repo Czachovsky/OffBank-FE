@@ -1,0 +1,75 @@
+@use '../../../../../assets/layout/scss/mixins';
+section{
+  padding-bottom: 160px;
+}
+h2{
+  @include mixins.fontSize(56);
+  font-weight: 600;
+  @include mixins.media-query('max', 'lg'){
+    @include mixins.fontSize(32);
+  }
+}
+
+.faq-list {
+  .faq-question {
+    padding: 30px 24px 22px 24px;
+    border-color: var(--faq-border);
+    border-radius: 24px;
+    background-color: var(--white);
+    transition: all 0.3s ease;
+    &-active {
+      background-color: var(--faq-background);
+    }
+
+    &-header {
+      span {
+        @include mixins.fontSize(20);
+        font-weight: 500;
+        line-height: 24px;
+        @include mixins.media-query('max', 'lg'){
+          max-width: calc(100% - 50px);
+        }
+      }
+    }
+
+    &-button {
+      background: var(--button-red);
+      border: 1px solid var(--button-red);
+      border-radius: 50px;
+      height: 40px;
+      width: 40px;
+      transition: all 0.3s ease-in-out;
+
+      &.__active {
+        transform: rotate(180deg);
+        background: transparent;
+        border-color: var(--faq-border);
+
+        svg {
+          path {
+            fill: var(--color-base);
+          }
+        }
+      }
+    }
+
+    &-content {
+      color: #565656;
+      @include mixins.fontSize(16);
+      max-width: 90%;
+      line-height: 24px;
+      display: grid;
+      grid-template-rows: 0fr;
+      overflow: hidden;
+      transition: grid-template-rows 0.3s ease;
+
+      &.question-open {
+        grid-template-rows: 1fr;
+      }
+
+      & > div {
+        min-height: 0;
+      }
+    }
+  }
+}

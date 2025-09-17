@@ -1,0 +1,47 @@
+<section>
+    <div class="container">
+        <div class="flex align-items-center justify-content-between _h">
+            <h2>
+                Dlaczego warto <br>nam zaufać?
+            </h2>
+            <offbank-logo
+                    animationPath="/assets/logo_animation_white.json"
+                    [width]="115"
+                    [height]="115"
+                    [playOnce]="true"
+                    [loop]="false"
+                    [playOnViewport]="true">
+                >
+            </offbank-logo>
+
+        </div>
+        <div class="relative flex align-items-center justify-content-end">
+            @for (slide of slides; track $index) {
+                <img
+                        [src]="slide.image"
+                        [alt]="slide.header"
+                        [@slideAnimation]="getAnimationState($index)"
+                        class="carousel-image"
+                />
+            }
+            <div class="slider_wrapper">
+                <div class="swiper" #swiperContainer>
+                    <div class="swiper-wrapper">
+                        @for (slide of slides; track $index) {
+                            <div class="swiper-slide">
+                                <div class="slide-content">
+                                    <!--                            <img [src]="slide.image" [alt]="slide.header">-->
+                                    <h3>{{ slide.header }}</h3>
+                                    <span>{{ slide.content }}</span>
+                                </div>
+                            </div>
+                        }
+                    </div>
+                    <div class="swiper-pagination"></div>
+                    <div class="swiper-button-next"></div>
+                    <div class="swiper-button-prev"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

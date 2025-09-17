@@ -1,0 +1,29 @@
+<section class="w-full">
+    <div class="container">
+        <div class="grid">
+            <div class="xlg:col-6 col-12 xlg:text-left text-center">
+                <img src="assets/img/how-it-works.webp" alt="How it works?">
+            </div>
+            <div class="xlg:col-6 col-12">
+                <h2 class="mb-7">Jak to działa</h2>
+                <div class="how-it-works-list">
+                    @for (h of howItWorks; track $index) {
+                        <div class="how-it-works-item gap-4 flex mb-5">
+                            <div>
+                                <div class="how-it-works-icon flex align-items-center justify-content-center"
+                                     [ngClass]="h.iconColor">
+                                    <div [innerHTML]="h.icon | sanitize: 'html'"
+                                         class="flex align-items-center justify-content-center"></div>
+                                </div>
+                            </div>
+                            <div class="how-it-works-text">
+                                <h3>{{ h.title }}</h3>
+                                <span>{{ h.description }}</span>
+                            </div>
+                        </div>
+                    }
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

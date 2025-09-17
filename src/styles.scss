@@ -1,1 +1,49 @@
-/* You can add global styles to this file, and also import other style files */
+$xs: 320px;
+$sm: 375px;
+$md: 414px;
+$lg: 768px;
+$xlg: 992px;
+$xl: 1024px;
+$xxl: 1280px;
+$xxxl: 1440px;
+$fhd: 1920px;
+
+@use '../node_modules/primeflex/primeflex.scss' with (
+  $breakpoints: (
+    'xs': $xs,
+    'sm': $sm,
+    'md': $md,
+    'lg': $lg,
+    'xlg': $xlg,
+    'xl': $xl,
+    'xxl': $xxl,
+    'xxxl': $xxxl,
+    'fhd': $fhd,
+  )
+);
+@import "assets/layout/scss/main.scss";
+html, body {
+
+}
+
+main {
+  //
+}
+
+a, a:hover {
+  transition: all 0.3s ease;
+
+  &:has(svg) {
+    &:hover {
+      opacity: 0.8;
+    }
+  }
+}
+
+body{
+  &._loading{
+    &:before{
+      content: '';
+    }
+  }
+}

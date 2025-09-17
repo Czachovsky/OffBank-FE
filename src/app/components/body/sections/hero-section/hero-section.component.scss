@@ -1,0 +1,96 @@
+@use '../../../../../assets/layout/scss/mixins';
+
+section {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 75px;
+
+  .logo {
+    right: 40px;
+    top: 40px;
+    position: absolute;
+    transition: all 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+    @include mixins.media-query('max', 'xxl') {
+      display: none;
+    }
+    &.test{
+      position: fixed;
+      top: 50%;
+      left: 50%;
+    }
+  }
+
+  .hero-description {
+    h1 {
+      @include mixins.fontSize(56);
+      font-weight: 600;
+      line-height: 1.14;
+    }
+
+    .description {
+      color: #565656;
+      @include mixins.fontSize(20);
+      line-height: 32px;
+    }
+
+    .wide-button {
+      height: 56px;
+      background: var(--button-red);
+      border-radius: 100px;
+      display: inline-flex;
+      color: var(--white);
+      font-weight: 600;
+      @include mixins.fontSize(16);
+      align-items: center;
+      padding: 0 24px 0 68px;
+      position: relative;
+      overflow: hidden;
+
+      &:before {
+        content: 'Zobacz jak to działa';
+        color: var(--button-red);
+        font-weight: 600;
+        @include mixins.fontSize(16);
+        position: absolute;
+        left: -100%;
+        z-index: 1;
+        transition: all 0.5s ease;
+      }
+
+      &:after {
+        color: var(--button-red);
+        background: var(--white);
+        height: 48px;
+        width: 48px;
+        content: "\e91b";
+        font-family: primeicons;
+        speak: none;
+        font-style: normal;
+        font-weight: 400;
+        font-variant: normal;
+        text-transform: none;
+        line-height: 1;
+        -webkit-font-smoothing: antialiased;
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        position: absolute;
+        border-radius: 100px;
+        left: 4px;
+        transition: all 0.5s ease;
+        padding: 0 16px;
+      }
+
+      &:hover {
+        &:after {
+          width: calc(100% - 8px);
+        }
+
+        &:before {
+          left: 40px;
+        }
+      }
+    }
+  }
+}

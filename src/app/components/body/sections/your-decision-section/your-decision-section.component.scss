@@ -1,0 +1,34 @@
+@use '../../../../../assets/layout/scss/mixins';
+
+section {
+  padding-top: 60px;
+  padding-bottom: 160px;
+
+  h2 {
+    @include mixins.fontSize(56);
+    font-weight: 600;
+    line-height: 1.14;
+  }
+
+  .description {
+    &-header {
+      font-weight: 500;
+      @include mixins.fontSize(32);
+      line-height: 40px;
+
+      span {
+        background: linear-gradient(180deg, #FF007B 50%, #18367F 100%);
+        -webkit-background-clip: text;
+        background-clip: text;
+        -webkit-text-fill-color: transparent;
+        color: transparent;
+      }
+    }
+
+    &-content {
+      color: #565656;
+      line-height: 32px;
+      @include mixins.fontSize(18);
+    }
+  }
+}
