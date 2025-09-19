@@ -77,7 +77,6 @@ export class TrustUsComponent implements AfterViewInit {
             on: {
                 slideChange: (e: Swiper) => {
                     this.currentIndex = e.activeIndex
-                    console.log(e.activeIndex)
                 }
             }
         });

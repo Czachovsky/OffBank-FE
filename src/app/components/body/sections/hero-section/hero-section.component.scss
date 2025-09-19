@@ -4,9 +4,16 @@ section {
   display: flex;
   align-items: center;
   justify-content: center;
-  margin-top: 75px;
-
-  .logo {
+  margin-top: 96px;
+  @include mixins.media-query('max', 'xlg') {
+    margin-top: 96px;
+    img{
+      width: 100%;
+      display: block;
+      margin-top: 60px;
+    }
+  }
+  .hero-logo {
     right: 40px;
     top: 40px;
     position: absolute;
@@ -26,12 +33,18 @@ section {
       @include mixins.fontSize(56);
       font-weight: 600;
       line-height: 1.14;
+      @include mixins.media-query('max', 'xlg') {
+        @include mixins.fontSize(40);
+      }
     }
 
     .description {
       color: #565656;
       @include mixins.fontSize(20);
       line-height: 32px;
+      @include mixins.media-query('max', 'xlg') {
+        @include mixins.fontSize(16);
+      }
     }
 
     .wide-button {

@@ -6,8 +6,8 @@ import lottie, {AnimationItem} from 'lottie-web';
     standalone: true,
     template: `
         <div #lottieContainer
-             [style.width.px]="width"
-             [style.height.px]="height">
+             [style.width]="width"
+             [style.height]="height">
         </div>
     `
 })
@@ -16,13 +16,13 @@ export class LogoComponent implements OnInit, OnDestroy {
 
     @Input() animationPath?: string;
     @Input() animationData?: any;
-    @Input() width = 300;
-    @Input() height = 300;
+    @Input() width: string = '300px';
+    @Input() height: string = '300px';
     @Input() autoplay = true;
     @Input() loop = true;
-    @Input() playOnViewport = false; // Nowa opcja!
-    @Input() viewportThreshold = 0.5; // 50% widoczności
-    @Input() playOnce = false; // Czy ma się odegrać tylko raz
+    @Input() playOnViewport = false;
+    @Input() viewportThreshold = 0.5;
+    @Input() playOnce = false;
 
     private animation?: AnimationItem;
     private observer?: IntersectionObserver;

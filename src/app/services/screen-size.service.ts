@@ -35,6 +35,10 @@ export class ScreenSizeService {
     readonly isDesktop = computed(() =>
         this.screenWidth() >= this.defaultBreakpoints.desktop
     );
+    readonly screenSize = computed(() =>
+        this.screenWidth()
+    );
+
 
     constructor() {
         this.initializeResizeListener();

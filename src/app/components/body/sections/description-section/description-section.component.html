@@ -3,8 +3,8 @@
         <div class="logo absolute">
             <offbank-logo
                     animationPath="/assets/logo_animation_white.json"
-                    [width]="115"
-                    [height]="115"
+                    [width]="'115px'"
+                    [height]="'115px'"
                     [playOnce]="true"
                     [loop]="false"
                     [playOnViewport]="true">
@@ -13,16 +13,16 @@
         </div>
         <div class="grid">
             <div class="xlg:col-9 col-12">
-                <h2 class="mb-7">Pobierz aplikację i <br> zacznij działać już dziś</h2>
+                <h2 class="xlg:mb-7 mb-5">Pobierz aplikację i <br> zacznij działać już dziś</h2>
                 <div class="description">
-                    <h4 class="mb-3">Wszystko załatwisz bez wychodzenia z domu</h4>
+                    <h4 class="xlg:mb-3 mb-5">Wszystko załatwisz bez wychodzenia z domu</h4>
                     <div class="mb-4">
                         Z OffBank przejdziesz przez cały proces – od analizy umowy, przez propozycję ugody, aż po
                         zakończenie sprawy – bez papierów, kolejek i stresu. Dostajesz powiadomienia o każdej zmianie
                         statusu, podejmujesz decyzje w swoim tempie i masz dostęp do najlepszych kancelarii w kraju.
                         Prościej się nie da.
                     </div>
-                    <div class="flex gap-2">
+                    <div class="flex gap-2 app-list">
                         <a href="#">
                             <svg xmlns="http://www.w3.org/2000/svg" width="162" height="49" viewBox="0 0 162 49"
                                  fill="none">
@@ -164,7 +164,7 @@
                 <div class="badges-img">
                     <img src="/assets/img/status.webp" alt="Statusy">
                 </div>
-                <div class="badge absolute flex align-items-center gap-3">
+                <div class="badge absolute flex align-items-center gap-3" [attr.data-value]="-15" #parallaxElement>
                     <div class="icon flex align-items-center justify-content-center">
                         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
                             <rect x="0.75" y="0.713867" width="22.5" height="22.5" rx="11.25" fill="#23B663"/>
@@ -175,7 +175,7 @@
                     </div>
                     <span>Rozpatrzona pozytywnie</span>
                 </div>
-                <div class="badge absolute flex align-items-center gap-3">
+                <div class="badge absolute flex align-items-center gap-3" [attr.data-value]="5" #parallaxElement>
                     <div class="icon flex align-items-center justify-content-center">
                         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
                             <rect x="0.75" y="0.713867" width="22.5" height="22.5" rx="11.25" fill="#FFBF1D"/>
@@ -186,7 +186,7 @@
                     </div>
                     <span>Umowa niekompletna!</span>
                 </div>
-                <div class="badge absolute flex align-items-center gap-3">
+                <div class="badge absolute flex align-items-center gap-3" [attr.data-value]="30" #parallaxElement>
                     <div class="icon flex align-items-center justify-content-center">
                         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
                             <rect x="0.75" y="0.713867" width="22.5" height="22.5" rx="11.25" fill="#18367F"/>

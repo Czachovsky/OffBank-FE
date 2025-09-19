@@ -40,10 +40,34 @@ a, a:hover {
   }
 }
 
-body{
-  &._loading{
-    &:before{
+body {
+  &._loading {
+    overflow: hidden !important;
+    position: fixed !important;
+    width: 100% !important;
+    height: 100% !important;
+    &:before {
       content: '';
+      width: 100vw;
+      height: 100vh;
+      display: block;
+      z-index: 9999;
+      position: fixed;
+      background-color: #18367F;
+      transition: all 0.3s ease-in-out;
+      opacity: 1;
     }
+    &.hide {
+      &:before {
+        opacity: 0;
+      }
+    }
+  }
+
+  .logo_loader {
+    width: 300px;
+    position: fixed;
+    z-index: 10000;
+    transition: all 0.5s ease-in-out;
   }
 }

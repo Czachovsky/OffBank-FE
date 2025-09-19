@@ -3,19 +3,40 @@
 .container {
   max-width: 1165px;
 }
-._h{
+
+._h {
   margin-bottom: 130px;
+  font-weight: 600;
+  @include mixins.media-query('max', 'xlg') {
+    margin-bottom: 32px;
+  }
 }
+
+offbank-logo {
+  @include mixins.media-query('max', 'xlg') {
+    display: none !important;
+  }
+}
+
 section {
   background: #18367F;
   padding-top: 120px;
   padding-bottom: 160px;
+  @include mixins.media-query('max', 'xlg') {
+    padding-top: 64px;
+    padding-bottom: 64px;
+  }
 
   h2 {
     color: var(--white);
     @include mixins.fontSize(56);
     line-height: 1.14;
     font-weight: 600;
+    @include mixins.media-query('max', 'xlg') {
+      @include mixins.fontSize(32);
+      z-index: 100;
+      text-shadow: 0 2px 4px rgba(0, 0, 0, 0.6);;
+    }
 
   }
 }
@@ -28,7 +49,8 @@ section {
   max-width: 790px;
   width: 100%;
   @include mixins.media-query('max', 'xlg') {
-    z-index: 100;
+    z-index: 9;
+    padding: 24px;
   }
 }
 
@@ -39,12 +61,21 @@ section {
     font-weight: 500;
     color: var(--white);
     margin-bottom: 24px;
+    @include mixins.media-query('max', 'xlg') {
+      @include mixins.fontSize(20);
+      line-height: 28px;
+      padding-right: 50px;
+    }
   }
 
   span {
     color: var(--white);
     line-height: 32px;
     @include mixins.fontSize(18);
+    @include mixins.media-query('max', 'xlg') {
+      @include mixins.fontSize(16);
+      line-height: 24px;
+    }
   }
 }
 
@@ -53,6 +84,14 @@ section {
   left: 0;
   z-index: -1;
   margin-top: 35px;
+  @include mixins.media-query('max', 'xlg') {
+    margin: 0;
+    max-width: 180px;
+    top: -168px;
+    right: -44px;
+    left: unset;
+    z-index: 10;
+  }
 }
 
 
@@ -65,6 +104,9 @@ section {
     gap: 11px;
     align-items: center;
     justify-content: end;
+    @include mixins.media-query('max', 'xlg') {
+      display: none;
+    }
 
     .swiper-pagination-bullet {
       height: 10px;

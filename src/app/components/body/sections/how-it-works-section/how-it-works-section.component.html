@@ -2,13 +2,14 @@
     <div class="container">
         <div class="grid">
             <div class="xlg:col-6 col-12 xlg:text-left text-center">
-                <img src="assets/img/how-it-works.webp" alt="How it works?">
+                <offbank-autoplay-video
+                        [videoSrc]="'assets/img/_jak%20to%20dziala_v2-mp4.mp4'"></offbank-autoplay-video>
             </div>
             <div class="xlg:col-6 col-12">
-                <h2 class="mb-7">Jak to działa</h2>
+                <h2 class="xlg:mb-7 mb-5">Jak to działa</h2>
                 <div class="how-it-works-list">
                     @for (h of howItWorks; track $index) {
-                        <div class="how-it-works-item gap-4 flex mb-5">
+                        <div class="how-it-works-item gap-4 flex xlg:mb-5 mb-4">
                             <div>
                                 <div class="how-it-works-icon flex align-items-center justify-content-center"
                                      [ngClass]="h.iconColor">
@@ -27,3 +28,4 @@
         </div>
     </div>
 </section>
+

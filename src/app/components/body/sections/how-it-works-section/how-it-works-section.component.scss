@@ -3,6 +3,10 @@
 section {
   padding-top: 160px;
   padding-bottom: 60px;
+  @include mixins.media-query('max', 'xlg') {
+    padding-top: 64px;
+    padding-bottom: 64px;
+  }
 }
 
 .grid {
@@ -19,6 +23,9 @@ h2 {
   font-weight: 600;
   @include mixins.fontSize(56);
   line-height: 1.14;
+  @include mixins.media-query('max', 'xlg') {
+    @include mixins.fontSize(40);
+  }
 }
 
 .bg-blue {
@@ -57,12 +64,18 @@ h2 {
     @include mixins.fontSize(24);
     font-weight: 500;
     line-height: 32px;
+    @include mixins.media-query('max', 'xlg') {
+      @include mixins.fontSize(20);
+    }
   }
 
   span {
     color: #565656;
     @include mixins.fontSize(16);
     line-height: 24px;
+    @include mixins.media-query('max', 'xlg') {
+      @include mixins.fontSize(14);
+    }
 
   }
 }

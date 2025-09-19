@@ -3,11 +3,17 @@
 section {
   padding-top: 60px;
   padding-bottom: 160px;
-
+  @include mixins.media-query('max', 'xlg') {
+    padding-top: 64px;
+    padding-bottom: 64px;
+  }
   h2 {
     @include mixins.fontSize(56);
     font-weight: 600;
     line-height: 1.14;
+    @include mixins.media-query('max', 'xlg') {
+      @include mixins.fontSize(32);
+    }
   }
 
   .description {
@@ -15,6 +21,9 @@ section {
       font-weight: 500;
       @include mixins.fontSize(32);
       line-height: 40px;
+      @include mixins.media-query('max', 'xlg') {
+        @include mixins.fontSize(24);
+      }
 
       span {
         background: linear-gradient(180deg, #FF007B 50%, #18367F 100%);
@@ -29,6 +38,9 @@ section {
       color: #565656;
       line-height: 32px;
       @include mixins.fontSize(18);
+      @include mixins.media-query('max', 'xlg') {
+        @include mixins.fontSize(16);
+      }
     }
   }
 }

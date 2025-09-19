@@ -22,3 +22,17 @@ a {
   }
 }
 
+.move_top {
+  position: absolute;
+  top: 0;
+  right: 0;
+
+  span {
+    transition: all 0.3s ease;
+
+    &:hover {
+      transition: all 0.3s ease;
+      opacity: 0.8;
+    }
+  }
+}

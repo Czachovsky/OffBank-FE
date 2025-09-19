@@ -3,6 +3,10 @@
 section {
   padding-top: 160px;
   padding-bottom: 80px;
+  @include mixins.media-query('max', 'xlg') {
+    padding-top: 64px;
+    padding-bottom: 64px;
+  }
 
   h2 {
     @include mixins.fontSize(56);
@@ -94,7 +98,7 @@ section {
       &-headers {
         margin-bottom: 32px;
         position: sticky;
-        top: 88px;
+        top: 96px;
         background: var(--white);
         z-index: 100;
 

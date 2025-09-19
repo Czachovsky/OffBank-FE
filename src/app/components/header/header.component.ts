@@ -1,4 +1,4 @@
-import {Component, inject} from '@angular/core';
+import {Component, inject, Renderer2} from '@angular/core';
 import {HeaderElements, HeaderProps, MenuElementsType} from "./header.types";
 import {SanitizePipe} from "../../pipes/sanitize.pipe";
 import {NgClass} from "@angular/common";
@@ -19,9 +19,15 @@ export class HeaderComponent {
     public readonly menuItems: HeaderProps[] = HeaderElements;
     public readonly MenuElementsType = MenuElementsType;
     public mobileMenuState: boolean = false;
-
+    private readonly renderer: Renderer2 = inject(Renderer2);
+    protected readonly screenService = inject(ScreenSizeService);
     public openMobileMenu(): void {
         this.mobileMenuState = !this.mobileMenuState;
+        if (this.mobileMenuState) {
+            this.renderer.addClass(document.body, 'overflow-hidden');
+        } else {
+            this.renderer.removeClass(document.body, 'overflow-hidden');
+        }
     }
 
     public scrollToElm(element: HTMLElement, offset = -90): void {

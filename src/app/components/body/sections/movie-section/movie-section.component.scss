@@ -1,6 +1,11 @@
+@use '../../../../../assets/layout/scss/mixins';
+
 section {
   background: #18367F;
   padding: 40px;
+  @include mixins.media-query('max', 'xlg') {
+    padding: 24px;
+  }
 }
 
 .movie-container {
