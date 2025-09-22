@@ -16,7 +16,7 @@ import {ScreenSizeService} from "./services/screen-size.service";
         LogoComponent
     ],
     template: `
-        <div class="logo_loader" #logoLoader>
+        <div class="logo_loader" style="display: none;" #logoLoader>
             <offbank-logo
                     animationPath="/assets/logo_animation_loader.json"
                     [width]="'100%'"
@@ -43,6 +43,7 @@ export class AppComponent implements OnInit, AfterViewInit {
         if (this.logoLoaderRef) {
             const element = this.logoLoaderRef.nativeElement;
             this.renderer.setStyle(element, 'transform', this.calculateCenterTransform());
+            this.renderer.setStyle(element, 'display', 'block');
         }
     }
 

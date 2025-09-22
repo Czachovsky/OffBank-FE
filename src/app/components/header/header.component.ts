@@ -42,6 +42,7 @@ export class HeaderComponent {
             if (this.screen.isMobile()) {
                 this.mobileMenuState = false;
             }
+            this.renderer.removeClass(document.body, 'overflow-hidden');
             const sectionElement = document.getElementById(`${sectionKey}`);
             this.scrollToElm(sectionElement!, offset);
         }, timeout);

@@ -26,15 +26,18 @@ import {LogoComponent} from "../../../logo/logo.component";
             })),
             state('previous', style({
                 opacity: 0,
-                transform: 'translateX(-100%) scale(0.8)'
+                transform: 'translateX(-100%) scale(0.8)',
+                zIndex: 0
             })),
             state('next', style({
                 opacity: 0,
-                transform: 'translateX(100%) scale(0.8)'
+                transform: 'translateX(100%) scale(0.8)',
+                zIndex: 0
             })),
             state('hidden', style({
                 opacity: 0,
-                transform: 'translateX(0) scale(0.8)'
+                transform: 'translateX(0) scale(0.8)',
+                zIndex: 0
             })),
             transition('* => current', [
                 animate('600ms cubic-bezier(0.25, 0.8, 0.25, 1)')

@@ -50,7 +50,10 @@ section {
   width: 100%;
   @include mixins.media-query('max', 'xlg') {
     z-index: 9;
-    padding: 24px;
+    padding: 0 24px 24px;
+    .swiper{
+      padding-top:64px;
+    }
   }
 }
 
@@ -105,7 +108,10 @@ section {
     align-items: center;
     justify-content: end;
     @include mixins.media-query('max', 'xlg') {
-      display: none;
+      position: absolute;
+      top: 24px;
+      margin: 0;
+      z-index: 299;
     }
 
     .swiper-pagination-bullet {

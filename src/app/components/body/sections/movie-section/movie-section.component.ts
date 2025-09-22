@@ -14,7 +14,7 @@ export class MovieSectionComponent implements AfterViewInit, OnDestroy {
     hasUserInteracted: boolean = false;
     readonly videoSrc = 'assets/img/example-video.mp4';
     readonly posterSrc = 'assets/img/b_und_l.webp';
-    readonly title = 'OffBank';
+    readonly title = 'OffKredyt';
     private intersectionObserver?: IntersectionObserver;
     private video?: HTMLVideoElement;
 
