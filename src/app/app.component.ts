@@ -17,7 +17,7 @@ import {ScreenSizeService} from "./services/screen-size.service";
     ],
     template: `
         <div class="logo_loader" style="display: none;" #logoLoader>
-            <offbank-logo
+            <offkredyt-logo
                     animationPath="/assets/logo_animation_loader.json"
                     [width]="'100%'"
                     [height]="'100%'"
@@ -25,12 +25,12 @@ import {ScreenSizeService} from "./services/screen-size.service";
                     [loop]="false"
                     [playOnViewport]="false"
                     [autoplay]="true">
-            </offbank-logo>
+            </offkredyt-logo>
         </div>
-        <offbank-header></offbank-header>
+        <offkredyt-header></offkredyt-header>
         <main>
-            <offbank-body></offbank-body>
-            <offbank-footer id="contact"></offbank-footer>
+            <offkredyt-body></offkredyt-body>
+            <offkredyt-footer id="contact"></offkredyt-footer>
         </main>`
 })
 export class AppComponent implements OnInit, AfterViewInit {

@@ -13,7 +13,7 @@ import {Swiper} from "swiper";
 import {Autoplay, Navigation, Pagination} from "swiper/modules";
 
 @Component({
-    selector: 'offbank-opinions-section',
+    selector: 'offkredyt-opinions-section',
     standalone: true,
     imports: [],
     templateUrl: './opinions-section.component.html',

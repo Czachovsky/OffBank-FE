@@ -2,7 +2,7 @@ import {Component, ElementRef, HostListener, QueryList, ViewChildren} from '@ang
 import {LogoComponent} from "../../../logo/logo.component";
 
 @Component({
-    selector: 'offbank-description-section',
+    selector: 'offkredyt-description-section',
     standalone: true,
     imports: [
         LogoComponent

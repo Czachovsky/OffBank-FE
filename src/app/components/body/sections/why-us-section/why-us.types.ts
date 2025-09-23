@@ -2,7 +2,7 @@ export interface ComparisonItem {
     id: number;
     icon: string;
     category: string;
-    offBankDescription: string;
+    offKredytDescription: string;
     traditionalDescription: string;
 }
 
@@ -13,7 +13,7 @@ export const comparisonData: ComparisonItem[] = [
 <path fill-rule="evenodd" clip-rule="evenodd" d="M5.76786 0.797363C5.76786 0.417668 6.07567 0.109863 6.45536 0.109863H10.9792C11.3589 0.109863 11.6667 0.417668 11.6667 0.797363C11.6667 1.17706 11.3589 1.48486 10.9792 1.48486H6.45536C6.07567 1.48486 5.76786 1.17706 5.76786 0.797363ZM14.7787 2.21599C15.0472 1.9475 15.4825 1.9475 15.751 2.21599L17.8939 4.35885C18.1624 4.62733 18.1624 5.06263 17.8939 5.33112C17.6254 5.5996 17.1901 5.5996 16.9216 5.33112L16.3363 4.74583L15.345 5.73718C16.6147 7.22843 17.381 9.1615 17.381 11.2736C17.381 15.9926 13.5554 19.8182 8.83631 19.8182C4.11724 19.8182 0.291672 15.9926 0.291672 11.2736C0.291672 6.55448 4.11724 2.72891 8.83631 2.72891C10.9484 2.72891 12.8814 3.4952 14.3727 4.76491L15.364 3.77355L14.7787 3.18826C14.5103 2.91978 14.5103 2.48447 14.7787 2.21599ZM8.83631 4.10391C4.87663 4.10391 1.66667 7.31387 1.66667 11.2736C1.66667 15.2332 4.87663 18.4432 8.83631 18.4432C12.796 18.4432 16.006 15.2332 16.006 11.2736C16.006 7.31387 12.796 4.10391 8.83631 4.10391ZM8.83631 7.29736C9.21601 7.29736 9.52381 7.60517 9.52381 7.98486V10.2843C10.2209 10.5587 10.7143 11.238 10.7143 12.0325C10.7143 13.0697 9.87349 13.9105 8.83631 13.9105C7.79914 13.9105 6.95834 13.0697 6.95834 12.0325C6.95834 11.238 7.45172 10.5587 8.14881 10.2843V7.98486C8.14881 7.60517 8.45662 7.29736 8.83631 7.29736ZM8.48586 11.6717C8.39179 11.7631 8.33334 11.891 8.33334 12.0325C8.33334 12.3103 8.55853 12.5355 8.83631 12.5355C9.1141 12.5355 9.33929 12.3103 9.33929 12.0325C9.33929 11.891 9.28084 11.7631 9.18677 11.6717C9.08415 11.7326 8.96431 11.7676 8.83631 11.7676C8.70831 11.7676 8.58848 11.7326 8.48586 11.6717Z" fill="white"/>
 </svg>`,
         category: 'Szybkość działania',
-        offBankDescription: 'Od razu po analizie widzisz kolejne kroki',
+        offKredytDescription: 'Od razu po analizie widzisz kolejne kroki',
         traditionalDescription: 'Czekasz tygodniami na odpowiedź i konsultacje'
     },
     {
@@ -24,7 +24,7 @@ export const comparisonData: ComparisonItem[] = [
 </svg>
 `,
         category: 'Wygoda',
-        offBankDescription: 'Wszystko zrobisz przez telefon, bez wychodzenia z domu',
+        offKredytDescription: 'Wszystko zrobisz przez telefon, bez wychodzenia z domu',
         traditionalDescription: 'Musisz umawiać się na spotkania, wysyłać dokumenty pocztą'
     },
     {
@@ -35,7 +35,7 @@ export const comparisonData: ComparisonItem[] = [
 </svg>
 `,
         category: 'Przejrzystość',
-        offBankDescription: 'Jasny status sprawy, powiadomienia w czasie rzeczywistym',
+        offKredytDescription: 'Jasny status sprawy, powiadomienia w czasie rzeczywistym',
         traditionalDescription: 'Trudno uzyskać informacje o postępach'
     },
     {
@@ -46,7 +46,7 @@ export const comparisonData: ComparisonItem[] = [
 </svg>
 `,
         category: 'Dostęp do kancelarii',
-        offBankDescription: 'Współpracujemy z topowymi specjalistami od franków',
+        offKredytDescription: 'Współpracujemy z topowymi specjalistami od franków',
         traditionalDescription: 'Trzeba samemu szukać i weryfikować kancelarie'
     },
     {
@@ -57,7 +57,7 @@ export const comparisonData: ComparisonItem[] = [
 </svg>
 `,
         category: 'Koszty początkowe',
-        offBankDescription: 'Możesz wybrać 0%, 50% lub 100% udziału własnego',
+        offKredytDescription: 'Możesz wybrać 0%, 50% lub 100% udziału własnego',
         traditionalDescription: 'Zazwyczaj wysoka opłata na start'
     },
     {
@@ -68,7 +68,7 @@ export const comparisonData: ComparisonItem[] = [
 </svg>
 `,
         category: 'Obsługa',
-        offBankDescription: 'Intuicyjny interfejs i prosty proces krok po kroku',
+        offKredytDescription: 'Intuicyjny interfejs i prosty proces krok po kroku',
         traditionalDescription: 'Skomplikowane formalności i niezrozumiałe umowy'
     }
 ];

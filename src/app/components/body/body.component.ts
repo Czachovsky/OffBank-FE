@@ -12,7 +12,7 @@ import {ScreenSizeService} from "../../services/screen-size.service";
 import {TrustUsComponent} from "./sections/trust-us/trust-us.component";
 
 @Component({
-  selector: 'offbank-body',
+  selector: 'offkredyt-body',
   standalone: true,
     imports: [
         HeroSectionComponent,

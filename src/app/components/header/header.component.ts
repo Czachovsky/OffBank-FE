@@ -5,7 +5,7 @@ import {NgClass} from "@angular/common";
 import {ScreenSizeService} from "../../services/screen-size.service";
 
 @Component({
-    selector: 'offbank-header',
+    selector: 'offkredyt-header',
     standalone: true,
     imports: [
         SanitizePipe,

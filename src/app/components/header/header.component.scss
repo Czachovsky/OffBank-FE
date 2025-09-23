@@ -1,5 +1,18 @@
 @use '../../../assets/layout/scss/mixins';
 
+.logo {
+  position: relative;
+
+  &:before {
+    content: "Beta";
+    position: absolute;
+    right: -42px;
+    top: 0;
+    font-size: 14px;
+    color: #18367F;
+    transition: color 0.2s ease;
+  }
+}
 
 @include mixins.media-query('max', 'xlg') {
   .nav-social {
@@ -50,6 +63,11 @@ header {
       backdrop-filter: none;
 
       .logo {
+        &:before {
+          color: var(--white);
+          transition: color 0.2s ease;
+        }
+
         svg {
           path:not(.nope) {
             fill: #ffffff;

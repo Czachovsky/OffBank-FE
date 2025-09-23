@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "offbank": {
+    "offkredyt": {
       "projectType": "application",
       "schematics": {
         "@schematics/angular:component": {
@@ -16,12 +16,12 @@
       },
       "root": "",
       "sourceRoot": "src",
-      "prefix": "offbank",
+      "prefix": "offkredyt",
       "architect": {
         "build": {
           "builder": "@angular-devkit/build-angular:application",
           "options": {
-            "outputPath": "dist/offbank",
+            "outputPath": "dist/offkredyt",
             "index": "src/index.html",
             "browser": "src/main.ts",
             "polyfills": [
@@ -73,10 +73,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "buildTarget": "offbank:build:production"
+              "buildTarget": "offkredyt:build:production"
             },
             "development": {
-              "buildTarget": "offbank:build:development"
+              "buildTarget": "offkredyt:build:development"
             }
           },
           "defaultConfiguration": "development"

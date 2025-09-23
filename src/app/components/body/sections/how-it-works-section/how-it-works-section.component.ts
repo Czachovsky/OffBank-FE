@@ -5,7 +5,7 @@ import {NgClass} from "@angular/common";
 import {AutoplayVideoComponent} from "../../../autoplay-video/autoplay-video.component";
 
 @Component({
-    selector: 'offbank-how-it-works-section',
+    selector: 'offkredyt-how-it-works-section',
     standalone: true,
     imports: [
         SanitizePipe,

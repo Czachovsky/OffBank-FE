@@ -1,7 +1,7 @@
 import {Component} from '@angular/core';
 
 @Component({
-    selector: 'offbank-footer',
+    selector: 'offkredyt-footer',
     standalone: true,
     imports: [],
     templateUrl: './footer.component.html',

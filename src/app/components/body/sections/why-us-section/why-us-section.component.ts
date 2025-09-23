@@ -3,7 +3,7 @@ import {comparisonData} from "./why-us.types";
 import {SanitizePipe} from "../../../../pipes/sanitize.pipe";
 
 @Component({
-    selector: 'offbank-why-us-section',
+    selector: 'offkredyt-why-us-section',
     standalone: true,
     imports: [
         SanitizePipe

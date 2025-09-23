@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 
 @Component({
-  selector: 'offbank-download-section',
+  selector: 'offkredyt-download-section',
   standalone: true,
   imports: [],
   templateUrl: './download-section.component.html',

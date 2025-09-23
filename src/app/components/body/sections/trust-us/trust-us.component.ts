@@ -10,7 +10,7 @@ import {LogoComponent} from "../../../logo/logo.component";
 
 
 @Component({
-    selector: 'offbank-trust-us',
+    selector: 'offkredyt-trust-us',
     standalone: true,
     templateUrl: './trust-us.component.html',
     styleUrl: './trust-us.component.scss',

@@ -1,7 +1,7 @@
 import {AfterViewInit, Component, ElementRef, Input, ViewChild} from '@angular/core';
 
 @Component({
-    selector: 'offbank-autoplay-video',
+    selector: 'offkredyt-autoplay-video',
     standalone: true,
     template: `
         <video

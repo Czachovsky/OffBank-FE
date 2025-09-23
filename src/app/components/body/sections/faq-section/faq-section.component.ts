@@ -3,7 +3,7 @@ import {faqQuestions, FaqType} from "./faq.types";
 import {NgClass} from "@angular/common";
 
 @Component({
-    selector: 'offbank-faq-section',
+    selector: 'offkredyt-faq-section',
     standalone: true,
     imports: [
         NgClass

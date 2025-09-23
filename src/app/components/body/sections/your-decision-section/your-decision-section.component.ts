@@ -2,7 +2,7 @@ import { Component } from '@angular/core';
 import {AutoplayVideoComponent} from "../../../autoplay-video/autoplay-video.component";
 
 @Component({
-  selector: 'offbank-your-decision-section',
+  selector: 'offkredyt-your-decision-section',
   standalone: true,
     imports: [
         AutoplayVideoComponent

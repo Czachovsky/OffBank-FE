@@ -2,7 +2,7 @@ import {Component, ElementRef, Input, OnDestroy, OnInit, ViewChild} from '@angul
 import lottie, {AnimationItem} from 'lottie-web';
 
 @Component({
-    selector: 'offbank-logo',
+    selector: 'offkredyt-logo',
     standalone: true,
     template: `
         <div #lottieContainer

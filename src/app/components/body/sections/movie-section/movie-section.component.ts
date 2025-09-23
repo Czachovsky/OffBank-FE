@@ -1,7 +1,7 @@
 import {AfterViewInit, Component, ElementRef, OnDestroy} from '@angular/core';
 
 @Component({
-    selector: 'offbank-movie-section',
+    selector: 'offkredyt-movie-section',
     standalone: true,
     imports: [],
     templateUrl: './movie-section.component.html',
