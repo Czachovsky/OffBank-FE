@@ -1,12 +1,14 @@
 import {Component} from '@angular/core';
 import {faqQuestions, FaqType} from "./faq.types";
 import {NgClass} from "@angular/common";
+import {SanitizePipe} from "../../../../pipes/sanitize.pipe";
 
 @Component({
     selector: 'offkredyt-faq-section',
     standalone: true,
     imports: [
-        NgClass
+        NgClass,
+        SanitizePipe
     ],
     templateUrl: './faq-section.component.html',
     styleUrl: './faq-section.component.scss'

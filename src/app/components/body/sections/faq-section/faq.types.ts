@@ -8,31 +8,31 @@ export const faqQuestions: FaqType[] = [
     {
         header: "Ile trwa analiza mojej sprawy?",
         open: false,
-        content: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer imperdiet nunc et tellus cursus, ut varius neque semper. Praesent condimentum nisi at lorem viverra, nec malesuada sem ullamcorper."
+        content: "Wstępna analiza odbywa się automatycznie przez nasz system AI i wynik otrzymujesz w czasie rzeczywistym. Oznacza to, że od razu po wgraniu umowy dowiesz się, czy zawiera ona klauzule abuzywne. Dzięki temu oszczędzasz czas i szybko podejmujesz decyzję, czy chcesz przejść dalej."
     },
     {
         header: "Jak mogę przesłać dokumenty do analizy?",
         open: true,
-        content: "Możesz przesłać dokumenty bezpośrednio przez aplikację – wystarczy zalogować się, przejść do zakładki „Moje sprawy” i wybrać opcję „Prześlij dokumenty”. Dokumenty możesz dodać z telefonu lub zeskanować bezpośrednio w aplikacji, korzystając z wbudowanego skanera, który automatycznie poprawi jakość zdjęcia. Pamiętaj, aby pliki były kompletne i czytelne – to przyspieszy analizę Twojej sprawy."
+        content: "Wystarczy wgrać umowę kredytową w aplikacji OffKredyt – to szybkie i bezpieczne. Wszystkie pliki są szyfrowane, aby Twoje dane były w pełni chronione. Proces trwa tylko kilka chwil i od razu otrzymujesz wstępny wynik."
     },
     {
         header: "Co się stanie, jeśli bank odrzuci ugodę?",
         open: false,
-        content: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer imperdiet nunc et tellus cursus, ut varius neque semper. Praesent condimentum nisi at lorem viverra, nec malesuada sem ullamcorper."
+        content: "Jeśli ugoda nie zostanie zaakceptowana, nasze kancelarie przedstawią Ci dalsze możliwe kroki, w tym drogę sądową. Zawsze otrzymasz jasne informacje o dostępnych opcjach. Dzięki temu masz pełną kontrolę nad dalszym przebiegiem sprawy."
     },
     {
         header: "Czy mogę zrezygnować z postępowania?",
         open: false,
-        content: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer imperdiet nunc et tellus cursus, ut varius neque semper. Praesent condimentum nisi at lorem viverra, nec malesuada sem ullamcorper."
+        content: "Tak, możesz zrezygnować na każdym etapie – decyzja zawsze należy do Ciebie. Wystarczy zgłosić rezygnację poprzez aplikację lub kontakt z naszym zespołem. Chcemy, żebyś czuł się komfortowo i miał poczucie bezpieczeństwa na każdym kroku."
     },
     {
         header: "Gdzie znajdę status mojej sprawy?",
         open: false,
-        content: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer imperdiet nunc et tellus cursus, ut varius neque semper. Praesent condimentum nisi at lorem viverra, nec malesuada sem ullamcorper."
+        content: "Status sprawy sprawdzisz w aplikacji, w zakładce „Moje sprawy”. Tam znajdziesz aktualne informacje o etapie, na którym znajduje się Twoja sprawa. Dzięki temu zawsze wiesz, co się dzieje i jakie będą kolejne kroki."
     },
     {
         header: "Jak mogę skontaktować się z supportem?",
         open: false,
-        content: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer imperdiet nunc et tellus cursus, ut varius neque semper. Praesent condimentum nisi at lorem viverra, nec malesuada sem ullamcorper."
+        content: 'Możesz skontaktować się z nami poprzez czat w aplikacji, e-mail <a href="mailto:kontakt@offkredyt.pl">kontakt@offkredyt.pl</a>. Czat jest obsługiwany bezpośrednio przez naszych konsultantów, którzy na bieżąco odpowiadają na pytania. Zawsze staramy się udzielać szybkiego i jasnego wsparcia.'
     }
 ];

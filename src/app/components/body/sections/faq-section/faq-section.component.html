@@ -17,7 +17,7 @@
                             </div>
                         </div>
                         <div class="faq-question-content" [ngClass]="{'question-open' : question.open}">
-                            <div>{{question.content}}</div>
+                            <div [innerHTML]="question.content | sanitize: 'html'"></div>
                         </div>
                     </div>
                 }
